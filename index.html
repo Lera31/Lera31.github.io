@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор КЗИ (ФСТЭК №117)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container" style="display: flex; gap: 20px;">
+    <!-- Левая колонка: группы с чекбоксами -->
+    <div style="flex: 2;">
+        <h1>Калькулятор показателя защищенности</h1>
+        <p class="subtitle">Бесплатный онлайн-расчёт по методике ФСТЭК России №117</p>
+        <div id="groups-container"></div>
+    </div>
+
+    <!-- Правая колонка: боковая панель с итогами по группам -->
+    <div style="flex: 1; background: #f8fafc; padding: 20px; border-radius: 16px; position: sticky; top: 20px; align-self: flex-start;">
+        <h2>Итоги по группам</h2>
+        <div id="sidebar-group-results"></div>
+
+        <!-- Общий результат -->
+        <div style="margin-top: 20px; background: white; padding: 15px; border-radius: 12px;">
+            <h3>Общий результат</h3>
+            <div class="result-scale">
+                <div class="scale-bar">
+                    <div id="result-fill" class="scale-fill" style="width: 0%;"></div>
+                </div>
+                <div class="scale-labels">
+                    <span>0</span>
+                    <span>0,5</span>
+                    <span>1</span>
+                </div>
+            </div>
+            <div id="total-result" class="total-result" style="font-size: 32px;"></div>
+            <div id="total-status" class="total-status"></div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
